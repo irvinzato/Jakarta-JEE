@@ -2,14 +2,37 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Jakarta con Tomcat</title>
+    <title>Jakarta con Tomcat - Formularios</title>
 </head>
 <body>
     <h1> Aprendamos Jakarta usando Tomcat(Da soporte tanto a servlets como a páginas JSP (Java Server Pages) o Java Sockets)  </h1>
+    <h1> En este proyecto tengo ejemplso con Servlet enviando parámetros Get por URL o Query String y Formularios </h1>
     <a href="/web_app/parametros/url-get?hi=Hola animo"> Enviando parámetro 'hi'</a> <br>
     <a href="/web_app/parametros/url-get?hi=Hola animo&name=Irving"> Enviando 2 parámetros </a> <br>
     <a href="/web_app/parametros/url-get?name=Irving"> Enviando parámetro 'name' </a> <br>
     <a href="/web_app/parametros/url-get?hi=Hola animo&name=Irving&code=423"> Enviando 3 parámetros, con código </a> <br>
     <a href="/web_app/parametros/url-get"> Sin parámetros </a>
+
+    <h3> Formulario de usuarios </h3>
+    <form action="/web_app/registro" method="post">
+        <div>
+            <label for="username">Usuario</label>
+            <div><input type="text" name="username" id="username"></div>
+        </div>
+        <div>
+            <label for="password">Contraseña</label>
+            <div><input type="password" name="password" id="password"></div>
+        </div>
+        <div>
+            <label for="email">Email</label>
+            <div><input type="text" name="email" id="email"></div>
+        </div>
+        <div>
+            <div>
+                <input type="submit" value="Enviar">
+            </div>
+        </div>
+    </form>
+
 </body>
 </html>
