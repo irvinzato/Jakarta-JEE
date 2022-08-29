@@ -1,3 +1,8 @@
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@page import="java.util.List"%>
+<%
+    List<String> errors = (List<String>) request.getAttribute("errors");
+%>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,8 +17,18 @@
     <a href="/web_app/parametros/url-get?name=Irving"> Enviando parámetro 'name' </a> <br>
     <a href="/web_app/parametros/url-get?hi=Hola animo&name=Irving&code=423"> Enviando 3 parámetros, con código </a> <br>
     <a href="/web_app/parametros/url-get"> Sin parámetros </a>
+    <hr>
 
     <h3> Formulario de usuarios </h3>
+    <%
+        if( errors != null && errors.size() > 0 ) {
+    %>
+    <ul>
+        <% for(String err: errors) { %>
+            <li> <% out.print(err); %> </li>
+        <% } %>
+    </ul>
+    <% } %>
     <form action="/web_app/registro" method="post"> <!-- Importante indicar "method" post porque por defecto seria get-->
         <div>
             <label for="username">Usuario</label> <!-- "for" enlaza con "id" para que también reaccione al dar click en etiqueta -->
