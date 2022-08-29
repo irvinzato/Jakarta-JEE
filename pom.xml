@@ -28,6 +28,7 @@
     </dependencies>
 
     <build>
+        <finalName>web_app-Jakarta</finalName> <!-- Para personalizar nombre final del .war -->
         <plugins>
             <plugin>
                 <artifactId>maven-compiler-plugin</artifactId>

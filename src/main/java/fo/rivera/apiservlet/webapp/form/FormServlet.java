@@ -8,6 +8,7 @@ import jakarta.servlet.http.HttpServletResponse;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.Arrays;
 
 @WebServlet("/registro")
 public class FormServlet extends HttpServlet {
@@ -19,6 +20,10 @@ public class FormServlet extends HttpServlet {
     String username = req.getParameter("username"); //Mismo nombre del "name" en HTML para obtener parámetro
     String password = req.getParameter("password");
     String email = req.getParameter("email");
+    String country = req.getParameter("country");
+    String[] languages = req.getParameterValues("languages"); //Arreglo porque puedo tener selección multiple
+    String[] roles = req.getParameterValues("roles");
+
     try (PrintWriter out = resp.getWriter()) {
       out.println("<!DOCTYPE html>");
       out.println("<html>");
@@ -32,6 +37,17 @@ public class FormServlet extends HttpServlet {
       out.println("       <li>Usuario: " + username + "</li>");
       out.println("       <li>Contraseña: " + password + "</li>");
       out.println("       <li>Email: " + email + "</li>");
+      out.println("       <li>País: " + country + "</li>");
+      out.println("       <li>Lenguajes: <ul>");
+      Arrays.asList(languages).forEach( language -> { //Transformo arreglo a Array para usar forEach
+        out.println("       <li>" + language + "</li>");
+      });
+      out.println("       </ul></li>");
+      out.println("       <li>Roles: <ul>");
+      Arrays.asList(roles).forEach( rol -> {
+        out.println("       <li>" + rol + "</li>");
+      });
+      out.println("       </ul></li>");
       out.println("     </ul>");
       out.println("   </body>");
       out.println("</html>");
