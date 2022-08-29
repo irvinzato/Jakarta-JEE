@@ -8,9 +8,7 @@ import jakarta.servlet.http.HttpServletResponse;
 
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
+import java.util.*;
 
 @WebServlet("/registro")
 public class FormServlet extends HttpServlet {
@@ -28,28 +26,28 @@ public class FormServlet extends HttpServlet {
     String idiom = req.getParameter("idiom");
     boolean enable = req.getParameter("enable") != null && req.getParameter("enable").equals("on");
     String secret = req.getParameter("secret");
-    List<String> errors = new ArrayList<>();    //Para validar formulario
+    Map<String, String> errors = new HashMap<>();    //Para validar formulario(Lo paso de List a Map para tener mayor control al mostrarlo en "jsp")
 
     if( username == null || username.isBlank() ) {  //isBlank de Java 11 para arriba, válida que no este vacío y no tenga solo espacios en blanco
-      errors.add("El usuario es requerido");
+      errors.put("username", "El usuario es requerido");
     }
     if( password == null || password.isBlank() ) {
-      errors.add("El password no puede ser vacío");
+      errors.put("password", "El password no puede ser vacío");
     }
     if( email == null || !email.contains("@") ) {   //Lo mejor es usar expresiones regulares
-      errors.add("El correo debe tener un formato correcto");
+      errors.put("email", "El correo debe tener un formato correcto");
     }
     if( country == null || country.isBlank() ) {
-      errors.add("El pais es requerido");
+      errors.put("country", "El pais es requerido");
     }
     if( languages == null || languages.length == 0 ) {
-      errors.add("Debe seleccionar al menos un idioma");
+      errors.put("languages", "Debe seleccionar al menos un idioma");
     }
     if( roles == null || roles.length == 0 ) {
-      errors.add("Debe seleccionar al menos un rol");
+      errors.put("roles", "Debe seleccionar al menos un rol");
     }
     if( idiom == null ) {   //No es necesario isBlank porque es un radioButton, no puede tener espacios en blanco ni vacío, solo nulo
-      errors.add("Debe seleccionar un idioma");
+      errors.put("idiom", "Debe seleccionar un idioma");
     }
 
     if( errors.isEmpty() ) {

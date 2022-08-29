@@ -1,7 +1,7 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-<%@page import="java.util.List"%>
+<%@page import="java.util.Map"%>
 <%
-    List<String> errors = (List<String>) request.getAttribute("errors");
+    Map<String, String> errors = (Map<String, String>) request.getAttribute("errors");
 %>
 <!DOCTYPE html>
 <html lang="en">
@@ -24,7 +24,7 @@
         if( errors != null && errors.size() > 0 ) {
     %>
     <ul>
-        <% for(String err: errors) { %>
+        <% for( String err: errors.values() ) { %>
             <li> <% out.print(err); %> </li>
         <% } %>
     </ul>
@@ -33,14 +33,23 @@
         <div>
             <label for="username">Usuario</label> <!-- "for" enlaza con "id" para que también reaccione al dar click en etiqueta -->
             <div><input type="text" name="username" id="username"></div>
+            <% if( errors != null && errors.containsKey("username") ) {
+                out.println("<small style='color: red;'>" + errors.get("username") +  "</small>");
+            } %>
         </div>
         <div>
             <label for="password">Contraseña</label>
             <div><input type="password" name="password" id="password"></div>
+            <% if( errors != null && errors.containsKey("password") ) {
+                out.println("<small style='color: red;'>" + errors.get("password") +  "</small>");
+            } %>
         </div>
         <div>
             <label for="email">Email</label>
             <div><input type="text" name="email" id="email"></div>
+            <% if( errors != null && errors.containsKey("email") ) {
+                out.println("<small style='color: red;'>" + errors.get("email") +  "</small>");
+            } %>
         </div>
         <div>
             <label for="country">País</label>
@@ -55,6 +64,9 @@
                     <option value="PE">Perú</option>
                 </select>
             </div>
+            <% if( errors != null && errors.containsKey("country") ) {
+                out.println("<small style='color: red;'>" + errors.get("country") +  "</small>");
+            } %>
         </div>
         <div>
             <label for="languages">Lenguajes de programación</label>
@@ -68,6 +80,9 @@
                     <option value="react">React</option>
                 </select>
             </div>
+            <% if( errors != null && errors.containsKey("languages") ) {
+                out.println("<small style='color: red;'>" + errors.get("languages") +  "</small>");
+            } %>
         </div>
         <div>
             <label>Roles</label>
@@ -83,6 +98,9 @@
                 <input type="checkbox" name="roles" value="ROLE_MODERATOR">
                 <label>Moderador</label>
             </div>
+            <% if( errors != null && errors.containsKey("roles") ) {
+                out.println("<small style='color: red;'>" + errors.get("roles") +  "</small>");
+            } %>
         </div>
         <div>
             <label>Idiomas</label>
@@ -98,6 +116,9 @@
                 <input type="radio" name="idiom" value="fr">
                 <label>Frances</label>
             </div>
+            <% if( errors != null && errors.containsKey("idiom") ) {
+                out.println("<small style='color: red;'>" + errors.get("idiom") +  "</small>");
+            } %>
         </div>
         <div>
             <label for="enable">Habilitar</label>
