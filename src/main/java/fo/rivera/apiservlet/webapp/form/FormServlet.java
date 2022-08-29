@@ -23,6 +23,9 @@ public class FormServlet extends HttpServlet {
     String country = req.getParameter("country");
     String[] languages = req.getParameterValues("languages"); //Arreglo porque puedo tener selección multiple
     String[] roles = req.getParameterValues("roles");
+    String idiom = req.getParameter("idiom");
+    String enable = req.getParameter("enable");
+    String secret = req.getParameter("secret");
 
     try (PrintWriter out = resp.getWriter()) {
       out.println("<!DOCTYPE html>");
@@ -48,6 +51,9 @@ public class FormServlet extends HttpServlet {
         out.println("       <li>" + rol + "</li>");
       });
       out.println("       </ul></li>");
+      out.println("       <li>Idioma: " + idiom + "</li>");
+      out.println("       <li>Habilitado: " + enable + "</li>");
+      out.println("       <li>Secreto: " + secret + "</li>");
       out.println("     </ul>");
       out.println("   </body>");
       out.println("</html>");
