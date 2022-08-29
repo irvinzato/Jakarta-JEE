@@ -1,3 +1,4 @@
-fo\rivera\apiservlet\webapp\form\FormServlet.class
 org\rivera\webapp\servlet\HolaMundoServlet.class
 org\rivera\webapp\servlet\ParametroGetServlet.class
+hea\rivera\apiservlet\webapp\headers\CabecerasHttpRequestServlet.class
+fo\rivera\apiservlet\webapp\form\FormServlet.class

@@ -148,5 +148,13 @@
         <input type="hidden" name="secret" value="12345"> <!--El campo secreto normalmente va después del botón submit pero antes del form-->
     </form>
 </div>
+<hr>
+
+<div class="px-5">
+    <h3> Cabeceras HTTP </h3>
+
+    <a href="/web_app/cabeceras-request"> /web_app/cabeceras-request </a>
+</div>
+
 </body>
 </html>
