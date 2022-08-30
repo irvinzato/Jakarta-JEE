@@ -1,4 +1,4 @@
-package hea.rivera.apiservlet.webapp.headers;
+package hea.rivera.apiservlet.webapp.headers.controllers;
 
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
