@@ -162,6 +162,7 @@
         <li><a href="/web_app/redirigir"> Redirigir </a></li>
         <li><a href="/web_app/despachar"> Despachar </a></li>
         <li><a href="/web_app/login.html"> Login Ejemplo Status HTTP </a></li>
+        <li><a href="/web_app/buscar.html"> Buscar producto. Ejemplo Status HTTP </a></li>
     </ul>
 </div>
 <hr>

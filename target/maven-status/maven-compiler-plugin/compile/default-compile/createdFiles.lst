@@ -3,6 +3,7 @@ hea\rivera\apiservlet\webapp\headers\controllers\ProductoXlsServlet.class
 hea\rivera\apiservlet\webapp\headers\controllers\HoraActualizadaServlet.class
 hea\rivera\apiservlet\webapp\headers\service\ProductoServiceImp.class
 hea\rivera\apiservlet\webapp\headers\service\ProductoService.class
+hea\rivera\apiservlet\webapp\headers\controllers\BuscarProductoServlet.class
 hea\rivera\apiservlet\webapp\headers\models\Producto.class
 hea\rivera\apiservlet\webapp\headers\controllers\LoginServlet.class
 hea\rivera\apiservlet\webapp\headers\controllers\RedirigirServlet.class
