@@ -157,6 +157,10 @@
         <li><a href="/web_app/cabeceras-request"> Cabeceras Http request </a></li>
         <li><a href="/web_app/productos.html"> Productos html </a></li>
         <li><a href="/web_app/productos.json"> Mostrar productos JSON </a></li>
+        <li>Recibo JSON y transformo a Producto, ocupe POSTMAN</li>
+        <li><a href="/web_app/hora-actualizada"> Hora actualizada </a></li>
+        <li><a href="/web_app/redirigir"> Redirigir </a></li>
+        <li><a href="/web_app/despachar"> Despachar </a></li>
     </ul>
 
 </div>
