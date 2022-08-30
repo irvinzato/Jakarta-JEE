@@ -6,3 +6,4 @@ fo\rivera\apiservlet\webapp\form\FormServlet.class
 hea\rivera\apiservlet\webapp\headers\service\ProductoServiceImp.class
 hea\rivera\apiservlet\webapp\headers\controllers\CabecerasHttpRequestServlet.class
 org\rivera\webapp\servlet\HolaMundoServlet.class
+hea\rivera\apiservlet\webapp\headers\controllers\ProductoJsonServlet.class

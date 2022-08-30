@@ -40,6 +40,7 @@ public class ProductoXlsServlet  extends HttpServlet {
         out.println("   <body>");
         out.println("     <h1> Listado de productos </h1>");
         out.println("       <p><a href=\"" + req.getContextPath() + "/productos.xls" + "\">Imprimir Excel</a></p>"); //"req.getContextPath()" obtiene el path principal
+        out.println("       <p><a href=\"" + req.getContextPath() + "/productos.json" + "\">Formato JSON</a></p>");
       }
       out.println("       <table>");
       out.println("         <tr>");

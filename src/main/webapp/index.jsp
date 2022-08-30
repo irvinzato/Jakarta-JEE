@@ -153,7 +153,12 @@
 <div class="px-5">
     <h3> Cabeceras HTTP </h3>
 
-    <a href="/web_app/cabeceras-request"> /web_app/cabeceras-request </a>
+    <ul>
+        <li><a href="/web_app/cabeceras-request"> Cabeceras Http request </a></li>
+        <li><a href="/web_app/productos.html"> Productos html </a></li>
+        <li><a href="/web_app/productos.json"> Mostrar productos JSON </a></li>
+    </ul>
+
 </div>
 
 </body>
