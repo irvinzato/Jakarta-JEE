@@ -12,6 +12,8 @@ hea\rivera\apiservlet\webapp\headers\models\Producto.class
 hea\rivera\apiservlet\webapp\headers\controllers\LoginServlet.class
 hea\rivera\apiservlet\webapp\headers\controllers\RedirigirServlet.class
 fo\rivera\apiservlet\webapp\form\FormServlet.class
+cok\rivera\apiservlet\webapp\cookies\service\LoginServiceImp.class
+cok\rivera\apiservlet\webapp\cookies\service\LoginService.class
 hea\rivera\apiservlet\webapp\headers\controllers\CabecerasHttpRequestServlet.class
 org\rivera\webapp\servlet\HolaMundoServlet.class
 hea\rivera\apiservlet\webapp\headers\controllers\ProductoJsonServlet.class

@@ -1,5 +1,7 @@
 package cok.rivera.apiservlet.webapp.cookies.controllers;
 
+import cok.rivera.apiservlet.webapp.cookies.service.LoginService;
+import cok.rivera.apiservlet.webapp.cookies.service.LoginServiceImp;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.Cookie;
@@ -20,12 +22,11 @@ public class LoginServlet extends HttpServlet {
 
   @Override
   protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-    Cookie[] cookies = req.getCookies() != null ? req.getCookies() : new Cookie[0];
-    Optional<Cookie> cookieOptional = Arrays.stream(cookies)
-            .filter( c -> "username".equals(c.getName()))  //Puedo hacer un "map" para transformar la "cookie" a "string"
-            .findAny();
-    if( cookieOptional.isPresent() ) {  //Si esta presente la cookie doy mensaje de bienvenida
-      resp.setContentType("text/html");
+    LoginService serviceAuth = new LoginServiceImp();
+    Optional<Cookie> cookieOptional = serviceAuth.getUsername(req);
+
+    if( cookieOptional.isPresent() ) {  //Si está presente la cookie doy mensaje de bienvenida
+      resp.setContentType("text/html;charset=UTF-8");
       try (PrintWriter out = resp.getWriter()) {
         out.println("<!DOCTYPE html>");
         out.println("<html>");
@@ -35,6 +36,7 @@ public class LoginServlet extends HttpServlet {
         out.println("   </head>");
         out.println("   <body>");
         out.println("     <h1> Bienvenido " + cookieOptional.get().getValue() + " ya has iniciado sesión anteriormente </h1>");
+        out.println("     <p><a href='" + req.getContextPath() + "/index.jsp'> Volver </a></p>");
         out.println("   </body>");
         out.println("</html>");
       }
@@ -63,6 +65,7 @@ public class LoginServlet extends HttpServlet {
         out.println("   <body>");
         out.println("     <h1> Login Correcto con Cookies </h1>");
         out.println("     <h2> Bienvenido " + username + "</h2>");
+        out.println("     <p><a href='" + req.getContextPath() + "/index.jsp'> Volver </a></p>");
         out.println("   </body>");
         out.println("</html>");
       }
