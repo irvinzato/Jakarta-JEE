@@ -171,8 +171,8 @@
     <h3> Manejo de Cookies(Como base en Login anterior) </h3>
 
     <ul>
-        <li><a href="/web_app/productosCookies.html"> Productos html </a></li>
-        <li><a href="/web_app/loginCookies.html"> Login Ejemplo Status HTTP </a></li>
+        <li><a href="/web_app/productosCookies.html"> Productos Cookies </a></li>
+        <li><a href="/web_app/loginCookies.html"> Login con Cookies </a></li> <!-- Transforme archivo a jsp, ahora utiliza método get del Servlet para la ruta -->
     </ul>
 </div>
 
