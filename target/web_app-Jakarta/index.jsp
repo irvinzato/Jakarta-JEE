@@ -167,5 +167,14 @@
 </div>
 <hr>
 
+<div class="px-5">
+    <h3> Manejo de Cookies(Como base Login anterior) </h3>
+
+    <ul>
+        <li><a href="/web_app/productosCookies.html"> Productos html </a></li>
+        <li><a href="/web_app/loginCookies.html"> Login Ejemplo Status HTTP </a></li>
+    </ul>
+</div>
+
 </body>
 </html>

@@ -1,8 +1,12 @@
 org\rivera\webapp\servlet\ParametroGetServlet.class
 hea\rivera\apiservlet\webapp\headers\controllers\ProductoXlsServlet.class
 hea\rivera\apiservlet\webapp\headers\controllers\HoraActualizadaServlet.class
+cok\rivera\apiservlet\webapp\cookies\controllers\LoginServlet.class
 hea\rivera\apiservlet\webapp\headers\service\ProductoServiceImp.class
+cok\rivera\apiservlet\webapp\cookies\controllers\ProductoXlsServlet.class
+cok\rivera\apiservlet\webapp\cookies\service\ProductoServiceImp.class
 hea\rivera\apiservlet\webapp\headers\service\ProductoService.class
+cok\rivera\apiservlet\webapp\cookies\service\ProductoService.class
 hea\rivera\apiservlet\webapp\headers\controllers\BuscarProductoServlet.class
 hea\rivera\apiservlet\webapp\headers\models\Producto.class
 hea\rivera\apiservlet\webapp\headers\controllers\LoginServlet.class
@@ -12,3 +16,4 @@ hea\rivera\apiservlet\webapp\headers\controllers\CabecerasHttpRequestServlet.cla
 org\rivera\webapp\servlet\HolaMundoServlet.class
 hea\rivera\apiservlet\webapp\headers\controllers\ProductoJsonServlet.class
 hea\rivera\apiservlet\webapp\headers\controllers\DespacharServlet.class
+cok\rivera\apiservlet\webapp\cookies\models\Producto.class

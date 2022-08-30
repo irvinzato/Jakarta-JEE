@@ -12,8 +12,8 @@
 </head>
 <body>
 <div class="px-5">
-    <h1> Aprendamos Jakarta usando Tomcat(Da soporte tanto a servlets como a páginas JSP (Java Server Pages) o Java Sockets)  </h1>
-    <h1> En este proyecto tengo ejemplos con Servlet enviando parámetros Get por URL o Query String y Formularios </h1>
+    <h1> Aprendamos Jakarta usando Tomcat(Da soporte tanto a servlets como a páginas JSP (Java Server Pages) o Java Sockets  </h1>
+    <h1> En este proyecto tengo ejemplos con Servlet enviando parámetros Get por URL o Query String, Formularios, Cabeceras HTTP y Cookies </h1>
     <a href="/web_app/parametros/url-get?hi=Hola animo"> Enviando parámetro 'hi'</a> <br>
     <a href="/web_app/parametros/url-get?hi=Hola animo&name=Irving"> Enviando 2 parámetros </a> <br>
     <a href="/web_app/parametros/url-get?name=Irving"> Enviando parámetro 'name' </a> <br>
@@ -166,6 +166,15 @@
     </ul>
 </div>
 <hr>
+
+<div class="px-5">
+    <h3> Manejo de Cookies(Como base en Login anterior) </h3>
+
+    <ul>
+        <li><a href="/web_app/productosCookies.html"> Productos html </a></li>
+        <li><a href="/web_app/loginCookies.html"> Login Ejemplo Status HTTP </a></li>
+    </ul>
+</div>
 
 </body>
 </html>
