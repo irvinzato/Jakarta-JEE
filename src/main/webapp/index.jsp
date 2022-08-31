@@ -168,12 +168,23 @@
 <hr>
 
 <div class="px-5">
-    <h3> Manejo de Cookies(Como base en Login anterior) </h3>
+    <h3> Manejo de Cookies(Como base Login anterior) </h3>
 
     <ul>
         <li><a href="/web_app/productosCookies.html"> Productos Cookies </a></li>
         <li><a href="/web_app/loginCookies.html"> Login con Cookies </a></li> <!-- Transforme archivo a jsp, ahora utiliza método get del Servlet para la ruta -->
         <li><a href="/web_app/logout"> Cerrar Sesión </a></li>
+    </ul>
+</div>
+<hr>
+
+<div class="px-5">
+    <h3> Manejo de HttpSession(Como base Login con Cookies) </h3>
+
+    <ul>
+        <li><a href="/web_app/productosSession.html"> Productos Session </a></li>
+        <li><a href="/web_app/loginSession.html"> Login con Session </a></li> <!-- Transforme archivo a jsp, ahora utiliza método get del Servlet para la ruta -->
+        <li><a href="/web_app/logoutSession"> Cerrar Sesión </a></li>
     </ul>
 </div>
 
