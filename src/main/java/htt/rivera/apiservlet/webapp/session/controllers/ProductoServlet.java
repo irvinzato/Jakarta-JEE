@@ -24,6 +24,10 @@ public class ProductoServlet extends HttpServlet {
     LoginService serviceLoginSession = new LoginServiceImp();
     Optional<String> usernameOptional = serviceLoginSession.getUsername(req);
 
+    //Estos valores los traigo de listeners
+    String msgRequestListener = (String) req.getAttribute("mensajeRequest");
+    String msgApp = (String) getServletContext().getAttribute("mensaje");
+
     resp.setContentType("text/html;charset=UTF-8");
     try (PrintWriter out = resp.getWriter()) {
       out.println("<!DOCTYPE html>");
@@ -60,6 +64,9 @@ public class ProductoServlet extends HttpServlet {
       });
       out.println("       </table>");
       out.println("       <p><a href='" + req.getContextPath() + "/index.jsp'> Volver </a></p>");
+      out.println("       <p>Uso de Listeners</p>");
+      out.println("       <p>requestInitialized: " + msgRequestListener + "</p>");
+      out.println("       <p>contextInitialized: " + msgApp + "</p>");
       out.println("   </body>");
       out.println("</html>");
     }

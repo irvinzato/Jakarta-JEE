@@ -1,4 +1,4 @@
-package htt.rivera.apiservlet.webapp.session.listener;
+package htt.rivera.apiservlet.webapp.session.listeners;
 
 import jakarta.servlet.*;
 import jakarta.servlet.annotation.WebListener;
@@ -9,10 +9,12 @@ import jakarta.servlet.http.HttpSessionListener;
 public class AplicacionListener implements ServletContextListener, ServletRequestListener, HttpSessionListener {
   private ServletContext servletContext;
 
+  //Utilizado para guardar objetos únicos que van a ser compartidos por toda la aplicación
   @Override
   public void contextInitialized(ServletContextEvent sce) {
     sce.getServletContext().log("Inicializando aplicación - contextInitialized");
     servletContext = sce.getServletContext();
+    servletContext.setAttribute("mensaje", "Algún valor global de la app");
   }
 
   @Override
@@ -23,6 +25,7 @@ public class AplicacionListener implements ServletContextListener, ServletReques
   @Override
   public void requestInitialized(ServletRequestEvent sre) {
     servletContext.log("Inicializando request - requestInitialized");
+    sre.getServletRequest().setAttribute("mensajeRequest", "Guardando algún valor para el request");
   }
 
   @Override
@@ -30,6 +33,7 @@ public class AplicacionListener implements ServletContextListener, ServletReques
     servletContext.log("Destruyendo request - requestDestroyed");
   }
 
+  //Cada que se crea la session puedo crear el carrito de compras
   @Override
   public void sessionCreated(HttpSessionEvent se) {
     servletContext.log("Inicializando session - sessionCreated");

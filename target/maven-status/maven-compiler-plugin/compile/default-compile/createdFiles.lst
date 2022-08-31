@@ -20,7 +20,6 @@ cok\rivera\apiservlet\webapp\cookies\models\Producto.class
 htt\rivera\apiservlet\webapp\session\controllers\AgregarCarroServlet.class
 org\rivera\webapp\servlet\ParametroGetServlet.class
 hea\rivera\apiservlet\webapp\headers\controllers\HoraActualizadaServlet.class
-htt\rivera\apiservlet\webapp\session\listener\AplicacionListener.class
 htt\rivera\apiservlet\webapp\session\service\LoginServiceImp.class
 htt\rivera\apiservlet\webapp\session\controllers\VerCarroServlet.class
 cok\rivera\apiservlet\webapp\cookies\service\ProductoService.class
@@ -32,4 +31,5 @@ fo\rivera\apiservlet\webapp\form\FormServlet.class
 hea\rivera\apiservlet\webapp\headers\controllers\CabecerasHttpRequestServlet.class
 org\rivera\webapp\servlet\HolaMundoServlet.class
 hea\rivera\apiservlet\webapp\headers\controllers\DespacharServlet.class
+htt\rivera\apiservlet\webapp\session\listeners\AplicacionListener.class
 htt\rivera\apiservlet\webapp\session\models\ItemCarro.class
