@@ -4,6 +4,7 @@ hea\rivera\apiservlet\webapp\headers\controllers\HoraActualizadaServlet.class
 cok\rivera\apiservlet\webapp\cookies\controllers\ProductoServlet.class
 cok\rivera\apiservlet\webapp\cookies\controllers\LoginServlet.class
 hea\rivera\apiservlet\webapp\headers\service\ProductoServiceImp.class
+cok\rivera\apiservlet\webapp\cookies\controllers\LogoutServlet.class
 cok\rivera\apiservlet\webapp\cookies\service\ProductoServiceImp.class
 hea\rivera\apiservlet\webapp\headers\service\ProductoService.class
 cok\rivera\apiservlet\webapp\cookies\service\ProductoService.class

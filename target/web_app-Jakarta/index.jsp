@@ -173,6 +173,7 @@
     <ul>
         <li><a href="/web_app/productosCookies.html"> Productos Cookies </a></li>
         <li><a href="/web_app/loginCookies.html"> Login con Cookies </a></li> <!-- Transforme archivo a jsp, ahora utiliza método get del Servlet para la ruta -->
+        <li><a href="/web_app/logout"> Cerrar Sesión </a></li>
     </ul>
 </div>
 
