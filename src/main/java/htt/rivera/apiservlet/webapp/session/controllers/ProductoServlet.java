@@ -4,7 +4,6 @@ import htt.rivera.apiservlet.webapp.session.models.Producto;
 import htt.rivera.apiservlet.webapp.session.service.*;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
-import jakarta.servlet.http.Cookie;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
@@ -22,8 +21,8 @@ public class ProductoServlet extends HttpServlet {
     ProductoService service = new ProductoServiceImp();
     List<Producto> products = service.toList();
 
-    LoginService serviceLoginCookie = new LoginServiceImp();
-    Optional<Cookie> cookieOptional = serviceLoginCookie.getUsername(req);
+    LoginService serviceLoginSession = new LoginServiceImp();
+    Optional<String> usernameOptional = serviceLoginSession.getUsername(req);
 
     resp.setContentType("text/html;charset=UTF-8");
     try (PrintWriter out = resp.getWriter()) {
@@ -35,15 +34,15 @@ public class ProductoServlet extends HttpServlet {
       out.println("   </head>");
       out.println("   <body>");
       out.println("     <h1> Listado de productos con Session </h1>");
-      if( cookieOptional.isPresent() ) {
-        out.println("       <h2 style='color: blue;'> Hola " + cookieOptional.get().getValue() + " bienvenido ! </h2>");
+      if( usernameOptional.isPresent() ) {
+        out.println("       <h2 style='color: blue;'> Hola " + usernameOptional.get() + " bienvenido ! </h2>");
       }
       out.println("       <table>");
       out.println("         <tr>");
       out.println("           <th> ID </th>");
       out.println("           <th> Nombre </th>");
       out.println("           <th> Tipo </th>");
-      if( cookieOptional.isPresent() ) {
+      if( usernameOptional.isPresent() ) {
         out.println("           <th> Precio </th>");
       }
       out.println("         </tr>");
@@ -52,7 +51,7 @@ public class ProductoServlet extends HttpServlet {
         out.println("           <td>" + p.getId() + "</td>");
         out.println("           <td>" + p.getName() + "</td>");
         out.println("           <td>" + p.getType() + "</td>");
-        if( cookieOptional.isPresent() ) {
+        if( usernameOptional.isPresent() ) {
           out.println("           <td>" + p.getPrice() + "</td>");
         }
         out.println("         </tr>");
