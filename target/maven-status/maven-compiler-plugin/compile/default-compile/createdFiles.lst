@@ -15,7 +15,9 @@ cok\rivera\apiservlet\webapp\cookies\service\LoginServiceImp.class
 cok\rivera\apiservlet\webapp\cookies\service\LoginService.class
 hea\rivera\apiservlet\webapp\headers\controllers\ProductoJsonServlet.class
 htt\rivera\apiservlet\webapp\session\controllers\LogoutServlet.class
+htt\rivera\apiservlet\webapp\session\models\Carro.class
 cok\rivera\apiservlet\webapp\cookies\models\Producto.class
+htt\rivera\apiservlet\webapp\session\controllers\AgregarCarroServlet.class
 org\rivera\webapp\servlet\ParametroGetServlet.class
 hea\rivera\apiservlet\webapp\headers\controllers\HoraActualizadaServlet.class
 htt\rivera\apiservlet\webapp\session\service\LoginServiceImp.class
@@ -28,3 +30,4 @@ fo\rivera\apiservlet\webapp\form\FormServlet.class
 hea\rivera\apiservlet\webapp\headers\controllers\CabecerasHttpRequestServlet.class
 org\rivera\webapp\servlet\HolaMundoServlet.class
 hea\rivera\apiservlet\webapp\headers\controllers\DespacharServlet.class
+htt\rivera\apiservlet\webapp\session\models\ItemCarro.class
