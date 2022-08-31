@@ -181,6 +181,9 @@
 <div class="px-5">
     <h3> Manejo de HttpSession(Como base Login con Cookies) </h3>
     <h3> Extendido a carro de compras </h3>
+    <h4> Añadí ejemplo de Listeners en este mismo proyecto </h4>
+    <p> Los listeners sirven para escuchar el inicio de la aplicación, request, session y destrucción de los mismos. Recordar que los "logs" se ven en la carpeta tomcat-logs-localhost.fecha </p>
+    <h5> Implementar borrar productos del carrito </h5>
 
     <ul>
         <li><a href="/web_app/productosSession.html"> Productos Session </a></li>

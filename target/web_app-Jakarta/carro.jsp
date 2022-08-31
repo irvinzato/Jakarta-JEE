@@ -13,7 +13,7 @@ Carro car = (Carro) session.getAttribute("carro");
 <h1>Carro de compras</h1>
 <% if( car == null || car.getItems().isEmpty() ) { %>
     <p>No hay productos en el carrito de compras</p>
-    <p>¡ Debes iniciar sesión !</p>
+    <p>¡ Debes iniciar sesión y agregar productos !</p>
 <% } else { %>
     <table>
         <tr>
