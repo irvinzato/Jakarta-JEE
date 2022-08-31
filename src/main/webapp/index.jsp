@@ -180,6 +180,7 @@
 
 <div class="px-5">
     <h3> Manejo de HttpSession(Como base Login con Cookies) </h3>
+    <h3> Extendido a carro de compras </h3>
 
     <ul>
         <li><a href="/web_app/productosSession.html"> Productos Session </a></li>
