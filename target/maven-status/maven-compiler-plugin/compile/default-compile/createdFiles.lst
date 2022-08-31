@@ -1,3 +1,4 @@
+htt\rivera\apiservlet\webapp\session\filters\LoginFiltro.class
 htt\rivera\apiservlet\webapp\session\service\ProductoService.class
 hea\rivera\apiservlet\webapp\headers\controllers\ProductoXlsServlet.class
 htt\rivera\apiservlet\webapp\session\controllers\ProductoServlet.class
