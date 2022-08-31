@@ -21,6 +21,7 @@ htt\rivera\apiservlet\webapp\session\controllers\AgregarCarroServlet.class
 org\rivera\webapp\servlet\ParametroGetServlet.class
 hea\rivera\apiservlet\webapp\headers\controllers\HoraActualizadaServlet.class
 htt\rivera\apiservlet\webapp\session\service\LoginServiceImp.class
+htt\rivera\apiservlet\webapp\session\controllers\VerCarroServlet.class
 cok\rivera\apiservlet\webapp\cookies\service\ProductoService.class
 hea\rivera\apiservlet\webapp\headers\controllers\BuscarProductoServlet.class
 hea\rivera\apiservlet\webapp\headers\models\Producto.class

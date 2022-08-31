@@ -186,6 +186,7 @@
         <li><a href="/web_app/productosSession.html"> Productos Session </a></li>
         <li><a href="/web_app/loginSession.html"> Login con Session </a></li> <!-- Transforme archivo a jsp, ahora utiliza método get del Servlet para la ruta -->
         <li><a href="/web_app/logoutSession"> Cerrar Sesión </a></li>
+        <li><a href="/web_app/ver-carro"> Ver carro de compras </a></li>
     </ul>
 </div>
 

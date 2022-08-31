@@ -181,11 +181,13 @@
 <div class="px-5">
     <h3> Manejo de HttpSession(Como base Login con Cookies) </h3>
     <h3> Extendido a carro de compras </h3>
+    <h5> Implementar borrar productos del carrito </h5>
 
     <ul>
         <li><a href="/web_app/productosSession.html"> Productos Session </a></li>
         <li><a href="/web_app/loginSession.html"> Login con Session </a></li> <!-- Transforme archivo a jsp, ahora utiliza método get del Servlet para la ruta -->
         <li><a href="/web_app/logoutSession"> Cerrar Sesión </a></li>
+        <li><a href="/web_app/ver-carro"> Ver carro de compras </a></li>
     </ul>
 </div>
 

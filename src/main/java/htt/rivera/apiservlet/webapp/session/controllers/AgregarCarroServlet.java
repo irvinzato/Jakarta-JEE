@@ -32,7 +32,7 @@ public class AgregarCarroServlet extends HttpServlet {
         car = new Carro();
         session.setAttribute("carro", car);
       } else {                                        //Ya existe en la sesión el carro
-        car = (Carro) session.getAttribute("car");
+        car = (Carro) session.getAttribute("carro");
       }
       car.addItemCar(item);
     }
